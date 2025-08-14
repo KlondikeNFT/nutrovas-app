@@ -1,9 +1,12 @@
 [build]
 builder = "nixpacks"
-buildCommand = "cd server && npm install"
+buildCommand = "cd server && npm install --production"
 
 [deploy]
 startCommand = "cd server && npm start"
 healthcheckPath = "/"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
+
+[deploy.envs]
+NODE_ENV = "production"
