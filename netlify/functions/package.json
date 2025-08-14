@@ -1,0 +1,13 @@
+{
+  "name": "nutrovas-functions",
+  "version": "1.0.0",
+  "description": "Netlify functions for Nutrovas app",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "axios": "^1.11.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
