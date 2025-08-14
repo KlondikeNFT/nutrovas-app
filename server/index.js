@@ -1430,6 +1430,16 @@ app.get('/api/activities', (req, res) => {
   }
 });
 
+// Root endpoint for health checks
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'OK', 
+    message: 'Nutrovas API Server is running',
+    health: `/api/health`,
+    version: '1.0.0'
+  });
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
