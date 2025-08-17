@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const LandingPage: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -9,17 +11,21 @@ const LandingPage: React.FC = () => {
         <div className="container-responsive">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">AI</span>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm sm:text-xl">AI</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">SupplementAdvisor</span>
+              <span className="text-lg sm:text-xl font-bold text-gray-900">SupplementAdvisor</span>
             </div>
+            
+            {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               <a href="#features" className="text-gray-600 hover:text-blue-600 font-medium">Features</a>
               <a href="#how-it-works" className="text-gray-600 hover:text-blue-600 font-medium">How It Works</a>
               <a href="#about" className="text-gray-600 hover:text-blue-600 font-medium">About</a>
             </div>
-            <div className="flex items-center space-x-4">
+            
+            {/* Desktop Auth Buttons */}
+            <div className="hidden md:flex items-center space-x-4">
               <Link to="/signin" className="text-gray-600 hover:text-blue-600 font-medium">
                 Sign In
               </Link>
@@ -27,27 +33,55 @@ const LandingPage: React.FC = () => {
                 Get Started
               </Link>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden text-gray-600 hover:text-blue-600 p-2"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t border-gray-200 pt-4 pb-2">
+              <div className="flex flex-col space-y-3">
+                <a href="#features" className="text-gray-600 hover:text-blue-600 font-medium py-2">Features</a>
+                <a href="#how-it-works" className="text-gray-600 hover:text-blue-600 font-medium py-2">How It Works</a>
+                <a href="#about" className="text-gray-600 hover:text-blue-600 font-medium py-2">About</a>
+                <hr className="border-gray-200" />
+                <Link to="/signin" className="text-gray-600 hover:text-blue-600 font-medium py-2">
+                  Sign In
+                </Link>
+                <Link to="/signup" className="btn-primary text-center">
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-20 px-4">
         <div className="container-responsive text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Track & Manage Your
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"> Supplement Journey</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 block sm:inline"> Supplement Journey</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
             A comprehensive platform for athletes and fitness enthusiasts to track supplement intake, 
             manage their supplement database, and prepare for AI-powered performance analysis. 
             Connect with Strava and Garmin to correlate supplements with your fitness data.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/signup" className="btn-primary text-lg px-8 py-4">
+            <Link to="/signup" className="btn-primary text-lg px-6 sm:px-8 py-3 sm:py-4">
               Start Your Journey
             </Link>
-            <button className="btn-outline text-lg px-8 py-4">
+            <button className="btn-outline text-lg px-6 sm:px-8 py-3 sm:py-4">
               Learn More
             </button>
           </div>
@@ -55,27 +89,27 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Fitness Integration Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
+      <section className="py-12 sm:py-20 bg-gradient-to-r from-gray-50 to-gray-100">
         <div className="container-responsive">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8 sm:mb-16">
             Fitness Tracking Integration
           </h2>
-          <p className="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 text-center mb-8 sm:mb-16 max-w-3xl mx-auto px-4">
             Connect your favorite fitness platforms to correlate supplement intake with performance data. 
             Get insights that only comprehensive tracking can provide.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12 max-w-5xl mx-auto">
             {/* Strava Integration */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mr-6">
+            <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 border border-gray-200">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6 text-center sm:text-left">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mb-4 sm:mb-0 sm:mr-6">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M15.387 17.944c-.386.199-.386.758 0 .957l6.086 3.141c.386.199.697.199 1.083 0l6.086-3.141c.386-.199-.386-.758 0-.957l-6.086-3.141c-.386-.199-.697-.199-1.083 0l-6.086 3.141z"/>
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Strava</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Strava</h3>
                   <p className="text-gray-600">The world's leading fitness community</p>
                 </div>
               </div>
@@ -107,15 +141,15 @@ const LandingPage: React.FC = () => {
             </div>
             
             {/* Garmin Integration */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mr-6">
+            <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 border border-gray-200">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6 text-center sm:text-left">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-0 sm:mr-6">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Garmin Connect</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Garmin Connect</h3>
                   <p className="text-gray-600">Professional-grade fitness tracking</p>
                 </div>
               </div>
@@ -147,22 +181,22 @@ const LandingPage: React.FC = () => {
             </div>
           </div>
           
-          <div className="text-center mt-12">
-            <div className="bg-white rounded-xl shadow-lg p-6 inline-block">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">AI-Powered Correlation Analysis</h4>
-              <p className="text-gray-600">Our advanced algorithms will analyze your supplement intake alongside fitness data to provide personalized insights and recommendations.</p>
+          <div className="text-center mt-8 sm:mt-12 px-4">
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 inline-block max-w-md">
+              <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">AI-Powered Correlation Analysis</h4>
+              <p className="text-sm sm:text-base text-gray-600">Our advanced algorithms will analyze your supplement intake alongside fitness data to provide personalized insights and recommendations.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+      <section id="features" className="py-12 sm:py-20 bg-white">
         <div className="container-responsive">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8 sm:mb-16 px-4">
             What Can SupplementAdvisor Do For You?
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <div className="card p-8 text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -201,12 +235,12 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Current Features Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-20 bg-gray-50">
         <div className="container-responsive">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8 sm:mb-16 px-4">
             Available Now
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -271,12 +305,12 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-20">
+      <section id="how-it-works" className="py-12 sm:py-20">
         <div className="container-responsive">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8 sm:mb-16 px-4">
             How It Works
           </h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">1</span>
@@ -312,24 +346,24 @@ const LandingPage: React.FC = () => {
 
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container-responsive text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-12 sm:py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="container-responsive text-center px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
             Ready to Connect Your Fitness & Supplements?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Join athletes and fitness enthusiasts who are building comprehensive data foundations for AI-powered performance insights.
           </p>
-          <Link to="/signup" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+          <Link to="/signup" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 inline-block">
             Get Started Now
           </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-8 sm:py-12">
         <div className="container-responsive">
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
