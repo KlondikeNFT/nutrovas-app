@@ -11,10 +11,10 @@ const LandingPage: React.FC = () => {
         <div className="container-responsive">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm sm:text-xl">AI</span>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-700 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm sm:text-xl">N</span>
               </div>
-              <span className="text-lg sm:text-xl font-bold text-gray-900">SupplementAdvisor</span>
+              <span className="text-lg sm:text-xl font-bold text-gray-900">Nutrovas</span>
             </div>
             
             {/* Desktop Navigation */}
@@ -70,7 +70,7 @@ const LandingPage: React.FC = () => {
         <div className="container-responsive text-center">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Track & Manage Your
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 block sm:inline"> Supplement Journey</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-700 block sm:inline"> Supplement Journey</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
             A comprehensive platform for athletes and fitness enthusiasts to track supplement intake, 
@@ -194,7 +194,7 @@ const LandingPage: React.FC = () => {
       <section id="features" className="py-12 sm:py-20 bg-white">
         <div className="container-responsive">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8 sm:mb-16 px-4">
-            What Can SupplementAdvisor Do For You?
+            What Can Nutrovas Do For You?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <div className="card p-8 text-center">
@@ -346,15 +346,15 @@ const LandingPage: React.FC = () => {
 
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-12 sm:py-20 bg-gradient-to-r from-green-600 to-green-700">
         <div className="container-responsive text-center px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
             Ready to Connect Your Fitness & Supplements?
           </h2>
-          <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-green-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Join athletes and fitness enthusiasts who are building comprehensive data foundations for AI-powered performance insights.
           </p>
-          <Link to="/signup" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 inline-block">
+          <Link to="/signup" className="bg-white text-green-600 hover:bg-gray-100 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 inline-block">
             Get Started Now
           </Link>
         </div>
@@ -366,10 +366,10 @@ const LandingPage: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">AI</span>
+                <div className="w-8 h-8 bg-green-700 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">N</span>
                 </div>
-                <span className="text-lg font-bold">SupplementAdvisor</span>
+                <span className="text-lg font-bold">Nutrovas</span>
               </div>
               <p className="text-gray-400">
                 Comprehensive supplement tracking and management platform for athletes and fitness enthusiasts.
@@ -409,7 +409,7 @@ const LandingPage: React.FC = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 AI SupplementAdvisor. All rights reserved.</p>
+            <p>&copy; 2024 Nutrovas. All rights reserved.</p>
           </div>
         </div>
       </footer>

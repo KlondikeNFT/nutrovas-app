@@ -16,8 +16,8 @@ const HelpSupport: React.FC = () => {
   const faqData: FAQItem[] = [
     // General Questions
     {
-      question: "What is SupplementAdvisor?",
-      answer: "SupplementAdvisor is a comprehensive platform for athletes and fitness enthusiasts to track supplement intake, manage their supplement database, and prepare for AI-powered performance analysis. It helps you monitor what supplements you're taking, when you're taking them, and correlate them with your fitness data.",
+      question: "What is Nutrovas?",
+      answer: "Nutrovas is a comprehensive platform for athletes and fitness enthusiasts to track supplement intake, manage their supplement database, and prepare for AI-powered performance analysis. It helps you monitor what supplements you're taking, when you're taking them, and correlate them with your fitness data.",
       category: "general"
     },
     {
@@ -26,8 +26,8 @@ const HelpSupport: React.FC = () => {
       category: "general"
     },
     {
-      question: "Is SupplementAdvisor free to use?",
-      answer: "Currently, SupplementAdvisor offers a free tier with access to core features including supplement tracking, pantry management, and basic analytics. Premium features including advanced AI analysis and fitness platform integrations will be available soon.",
+      question: "Is Nutrovas free to use?",
+      answer: "Currently, Nutrovas offers a free tier with access to core features including supplement tracking, pantry management, and basic analytics. Premium features including advanced AI analysis and fitness platform integrations will be available soon.",
       category: "general"
     },
 
@@ -269,7 +269,7 @@ const HelpSupport: React.FC = () => {
                   <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span className="text-gray-300">support@supplementadvisor.com</span>
+                  <span className="text-gray-300">support@nutrovas.com</span>
                 </div>
                 
                 <div className="flex items-center p-3 bg-gray-700 rounded-lg">
@@ -280,7 +280,7 @@ const HelpSupport: React.FC = () => {
                 </div>
                 
                 <button
-                  onClick={() => window.open('mailto:support@supplementadvisor.com', '_blank')}
+                  onClick={() => window.open('mailto:support@nutrovas.com', '_blank')}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
                 >
                   Send Email
@@ -358,7 +358,7 @@ const HelpSupport: React.FC = () => {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-100 mb-2">User Guide</h3>
-                <p className="text-gray-400 text-sm">Comprehensive guide to using SupplementAdvisor</p>
+                <p className="text-gray-400 text-sm">Comprehensive guide to using Nutrovas</p>
               </div>
               
               <div className="text-center">

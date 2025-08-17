@@ -152,7 +152,7 @@ const Settings: React.FC = () => {
                 Settings
               </h1>
               <p className="text-xl text-gray-400">
-                Customize your SupplementAdvisor experience
+                Customize your Nutrovas experience
               </p>
             </div>
           </div>
@@ -169,7 +169,7 @@ const Settings: React.FC = () => {
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-gray-100">Appearance</h2>
-                  <p className="text-gray-400">Customize how SupplementAdvisor looks and feels</p>
+                  <p className="text-gray-400">Customize how Nutrovas looks and feels</p>
                 </div>
               </div>
 

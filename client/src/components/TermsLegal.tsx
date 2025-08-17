@@ -72,23 +72,23 @@ const TermsLegal: React.FC = () => {
               <div className="space-y-6 text-gray-300 leading-relaxed">
                 <div>
                   <h3 className="text-xl font-semibold text-gray-100 mb-3">Acceptance of Terms</h3>
-                  <p>By accessing and using SupplementAdvisor, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+                  <p>By accessing and using Nutrovas, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-semibold text-gray-100 mb-3">Use License</h3>
-                  <p>Permission is granted to temporarily download one copy of SupplementAdvisor for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                  <p>Permission is granted to temporarily download one copy of Nutrovas for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
                   <ul className="list-disc list-inside mt-2 space-y-1 ml-4">
                     <li>Modify or copy the materials</li>
                     <li>Use the materials for any commercial purpose or for any public display</li>
-                    <li>Attempt to reverse engineer any software contained in SupplementAdvisor</li>
+                    <li>Attempt to reverse engineer any software contained in Nutrovas</li>
                     <li>Remove any copyright or other proprietary notations from the materials</li>
                   </ul>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-semibold text-gray-100 mb-3">User Responsibilities</h3>
-                  <p>As a user of SupplementAdvisor, you agree to:</p>
+                  <p>As a user of Nutrovas, you agree to:</p>
                   <ul className="list-disc list-inside mt-2 space-y-1 ml-4">
                     <li>Provide accurate and complete information</li>
                     <li>Maintain the security of your account credentials</li>
@@ -100,7 +100,7 @@ const TermsLegal: React.FC = () => {
 
                 <div>
                   <h3 className="text-xl font-semibold text-gray-100 mb-3">Service Availability</h3>
-                  <p>SupplementAdvisor strives to maintain high availability but does not guarantee uninterrupted service. We reserve the right to modify, suspend, or discontinue the service at any time with or without notice.</p>
+                  <p>Nutrovas strives to maintain high availability but does not guarantee uninterrupted service. We reserve the right to modify, suspend, or discontinue the service at any time with or without notice.</p>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@ const TermsLegal: React.FC = () => {
               <div className="space-y-6 text-gray-300 leading-relaxed">
                 <div>
                   <h3 className="text-xl font-semibold text-gray-100 mb-3">Information We Collect</h3>
-                  <p>SupplementAdvisor collects information you provide directly to us, including:</p>
+                  <p>Nutrovas collects information you provide directly to us, including:</p>
                   <ul className="list-disc list-inside mt-2 space-y-1 ml-4">
                     <li>Account information (username, email, password)</li>
                     <li>Personal information (name, date of birth, height, weight)</li>
@@ -233,7 +233,7 @@ const TermsLegal: React.FC = () => {
               <div className="space-y-6 text-gray-300 leading-relaxed">
                 <div>
                   <h3 className="text-xl font-semibold text-gray-100 mb-3">Cookies</h3>
-                  <p>SupplementAdvisor uses cookies to:</p>
+                  <p>Nutrovas uses cookies to:</p>
                   <ul className="list-disc list-inside mt-2 space-y-1 ml-4">
                     <li>Remember your login status</li>
                     <li>Store your preferences and settings</li>
@@ -264,7 +264,7 @@ const TermsLegal: React.FC = () => {
               <div className="space-y-6 text-gray-300 leading-relaxed">
                 <div>
                   <h3 className="text-xl font-semibold text-gray-100 mb-3">Fitness Platform Integration</h3>
-                  <p>SupplementAdvisor may integrate with third-party fitness platforms such as Strava and Garmin Connect. When you connect these services:</p>
+                  <p>Nutrovas may integrate with third-party fitness platforms such as Strava and Garmin Connect. When you connect these services:</p>
                   <ul className="list-disc list-inside mt-2 space-y-1 ml-4">
                     <li>We only access data you explicitly authorize</li>
                     <li>Data is used solely for supplement effectiveness analysis</li>
@@ -335,13 +335,13 @@ const TermsLegal: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-gray-700 p-4 rounded-lg">
                     <h4 className="text-lg font-semibold text-gray-100 mb-2">General Support</h4>
-                    <p className="text-gray-300">support@supplementadvisor.com</p>
+                    <p className="text-gray-300">support@nutrovas.com</p>
                     <p className="text-gray-400 text-sm mt-1">For technical issues and general questions</p>
                   </div>
                   
                   <div className="bg-gray-700 p-4 rounded-lg">
                     <h4 className="text-lg font-semibold text-gray-100 mb-2">Privacy Officer</h4>
-                    <p className="text-gray-300">privacy@supplementadvisor.com</p>
+                    <p className="text-gray-300">privacy@nutrovas.com</p>
                     <p className="text-gray-400 text-sm mt-1">For privacy and data protection concerns</p>
                   </div>
                 </div>
@@ -354,7 +354,7 @@ const TermsLegal: React.FC = () => {
                     <li>Sending you an email notification</li>
                     <li>Displaying a notice in the application</li>
                   </ul>
-                  <p className="mt-2">Your continued use of SupplementAdvisor after any changes constitutes acceptance of the updated terms.</p>
+                  <p className="mt-2">Your continued use of Nutrovas after any changes constitutes acceptance of the updated terms.</p>
                 </div>
               </div>
             </div>
@@ -363,7 +363,7 @@ const TermsLegal: React.FC = () => {
           {/* Footer */}
           <div className="text-center py-8">
             <p className="text-gray-400">
-              By using SupplementAdvisor, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and Privacy Policy.
+              By using Nutrovas, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and Privacy Policy.
             </p>
             <div className="mt-4">
               <button

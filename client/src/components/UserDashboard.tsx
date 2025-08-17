@@ -128,7 +128,12 @@ const UserDashboard: React.FC = () => {
           
           {/* Center - Brand Name */}
           <div className="absolute left-1/2 transform -translate-x-1/2 hidden sm:block">
-            <span className="text-lg sm:text-xl font-bold text-gray-100">SupplementAdvisor</span>
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-green-700 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">N</span>
+              </div>
+              <span className="text-lg sm:text-xl font-bold text-gray-100">Nutrovas</span>
+            </div>
           </div>
           
           {/* Right side - Hamburger Menu */}
